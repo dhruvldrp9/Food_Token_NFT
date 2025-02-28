@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center mb-0">Your QR Code</h2>
+            </div>
+            <div class="card-body text-center">
+                <div id="qrcode" class="mb-3 {% if is_redeemed %}redeemed{% else %}active{% endif %}"></div>
+                <p class="text-muted">
+                    {% if is_redeemed %}
+                        This QR code has been redeemed
+                    {% else %}
+                        Show this QR code to verifiers for authentication
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/qr.js') }}"></script>
+<script>
+    generateQR('{{ token_id }}');
+</script>
+{% endblock %}

@@ -1,0 +1,41 @@
+#reader {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#qrcode.active {
+    border-color: var(--bs-success);
+}
+
+#qrcode.redeemed {
+    border-color: var(--bs-danger);
+}
+
+#qrcode img {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.token-info {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--bs-dark);
+}
