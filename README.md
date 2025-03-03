@@ -1,5 +1,8 @@
 # Food Token App
 
+![Food_Token_Management](https://github.com/user-attachments/assets/1f79d704-260b-43db-ac16-60c1ed9056aa)
+
+
 A decentralized application for managing food tokens using Ethereum smart contracts, with a FastAPI backend and Flask frontend.
 
 ## Prerequisites
